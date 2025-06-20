@@ -1,125 +1,135 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html><html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Endesa Clone - Poupança Garantida</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      color: #333;
-    }
-    header {
-      background: #fff;
-      border-bottom: 2px solid #0068b5;
-      padding: 1em 2em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 40px;
-    }
-    nav a {
-      margin-left: 1em;
-      text-decoration: none;
-      color: #0068b5;
-      font-weight: bold;
-    }
-    section {
-      max-width: 960px;
-      margin: auto;
-      padding: 2em;
-    }
-    .cards {
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: #fff;
-      padding: 1em;
-      border-radius: 8px;
-      flex: 1;
-      min-width: 200px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .cta-box {
-      background: #e8f4ff;
-      border-left: 5px solid #0068b5;
-      padding: 1.5em;
-      text-align: center;
-      margin-bottom: 2em;
-      font-size: 1.2em;
-    }
-    label {
-      display: block;
-      margin-top: 1em;
-      font-weight: bold;
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 0.7em;
-      margin-top: 0.4em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1em;
-    }
-    button {
-      background: #0068b5;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-top: 1em;
-    }
-    .resultado {
-      font-weight: bold;
-      margin-top: 1em;
-      color: green;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5em;
-      background: #fff;
-      border-top: 1px solid #ddd;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      font-size: 30px;
-      text-align: center;
-      color: #fff;
-      line-height: 60px;
-      text-decoration: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
+    :root {
+      --azul-principal: #0071ce;
+      --azul-claro: #dbeeff;
+      --azul-gradiente: linear-gradient(90deg, #0071ce 0%, #00a1e4 100%);
+      --cinza-claro: #f5f5f5;
+      --branco: #ffffff;
+      --texto: #333333;
+    }body {
+  font-family: Arial, sans-serif;
+  background: var(--cinza-claro);
+  margin: 0;
+  color: var(--texto);
+}
+
+header {
+  background: var(--branco);
+  border-bottom: 3px solid var(--azul-principal);
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  height: 40px;
+}
+nav a {
+  margin-left: 1em;
+  text-decoration: none;
+  color: var(--azul-principal);
+  font-weight: bold;
+}
+
+section {
+  max-width: 960px;
+  margin: auto;
+  padding: 2em;
+}
+
+.cards {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.card {
+  background: var(--branco);
+  padding: 1em;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  border-top: 5px solid var(--azul-principal);
+}
+
+.cta-box {
+  background: var(--azul-claro);
+  border-left: 5px solid var(--azul-principal);
+  padding: 1.5em;
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+input, textarea, button {
+  width: 100%;
+  padding: 0.7em;
+  margin-top: 0.4em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+button {
+  background: var(--azul-principal);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.resultado {
+  font-weight: bold;
+  margin-top: 1em;
+  color: #007d00;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: var(--branco);
+  border-top: 1px solid #ddd;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
   </style>
 </head>
-<body>
-
-  <header>
+<body>  <header>
     <img src="endesa-logo-novo.jpg" alt="Endesa" />
     <nav>
       <a href="#planos">Planos</a>
       <a href="#simulador">Simulador</a>
       <a href="#contacto">Contacto</a>
     </nav>
-  </header>
-
-  <section class="cta-box">
+  </header>  <section class="cta-box">
     ⚡ <strong>Estás farto de pagar tanto de luz e não sabes porquê?</strong><br />
     📞 <strong>Liga-me grátis</strong> para começares já a poupar e garantir os teus <strong>70€</strong>!
-  </section>
-
-  <section id="planos">
+  </section>  <section id="planos">
     <h2>Planos de Luz & Gás</h2>
     <div class="cards">
       <div class="card">
@@ -139,9 +149,7 @@
         <p>1 dia grátis ou 50% 2 dias/sem + 14% gás</p>
       </div>
     </div>
-  </section>
-
-  <section id="simulador">
+  </section>  <section id="simulador">
     <h2>Simulador de Poupança</h2>
     <div class="simulador">
       <label for="valor">Quanto pagas atualmente na tua fatura (€)?</label>
@@ -149,9 +157,7 @@
       <button onclick="simular()">Calcular Poupança 30%</button>
       <p class="resultado" id="resultado"></p>
     </div>
-  </section>
-
-  <section id="contacto">
+  </section>  <section id="contacto">
     <h2>Contacto</h2>
     <form onsubmit="enviarEmail(); return false;">
       <label for="nome">📩 Nome:</label>
@@ -162,13 +168,9 @@
       <textarea id="mensagem" rows="4"></textarea>
       <button type="submit">Enviar</button>
     </form>
-  </section>
-
-  <footer>
+  </section>  <footer>
     © 2025 ...energia – Parceiro Endesa • Poupança garantida 30%
-  </footer>
-
-  <a class="whatsapp-button" href="https://wa.me/351968677320?text=Olá%20Miguel,%20quero%20saber%20mais%20sobre%20a%20oferta%20com%2030%%20de%20desconto" target="_blank">💬</a>
+  </footer><a class="whatsapp-button" href="https://wa.me/351968677320?text=Olá%20Miguel,%20quero%20saber%20mais%20sobre%20a%20oferta%20com%2030%%20de%20desconto" target="_blank">💬</a>
 
   <script>
     function simular() {
@@ -191,7 +193,5 @@
       const corpo = `Nome: ${nome}%0AEmail: ${email}%0AMensagem: ${mensagem}`;
       window.open(`mailto:miguelferreira@presentiluminado.pt?subject=Contacto via site&body=${corpo}`);
     }
-  </script>
-
-</body>
+  </script></body>
 </html>
