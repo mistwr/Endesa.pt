@@ -1,144 +1,125 @@
-<!DOCTYPE html><html lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Endesa Clone - Poupança Garantida</title>
   <style>
-    :root {
-      --azul-endesa: #0068b5;
-      --cinza-claro: #f5f5f5;
-      --branco: #ffffff;
-      --texto: #333333;
-    }body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--cinza-claro);
-  color: var(--texto);
-}
-
-header {
-  background: var(--branco);
-  border-bottom: 2px solid var(--azul-endesa);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-}
-
-header img {
-  height: 40px;
-}
-
-nav a {
-  margin-left: 1.5em;
-  color: var(--azul-endesa);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 2em;
-  max-width: 960px;
-  margin: auto;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.card {
-  flex: 1 1 220px;
-  background: var(--branco);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1em;
-}
-
-.simulador, .contacto, .cta-box {
-  background: var(--branco);
-  border-radius: 8px;
-  padding: 1.5em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-top: 2em;
-}
-
-label {
-  display: block;
-  margin-top: 1em;
-  font-weight: 600;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 0.7em;
-  margin-top: 0.3em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-button {
-  background: var(--azul-endesa);
-  color: var(--branco);
-  border: none;
-  cursor: pointer;
-  margin-top: 1em;
-}
-
-.resultado {
-  margin-top: 1em;
-  font-weight: bold;
-  color: green;
-}
-
-footer {
-  background: var(--branco);
-  text-align: center;
-  padding: 1em;
-  border-top: 1px solid #ddd;
-  margin-top: 3em;
-}
-
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 30px;
-  text-align: center;
-  color: #fff;
-  line-height: 60px;
-  text-decoration: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-
-.cta-box {
-  text-align: center;
-  font-size: 1.2em;
-  background-color: #e8f4ff;
-  border-left: 5px solid var(--azul-endesa);
-}
-
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      border-bottom: 2px solid #0068b5;
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 40px;
+    }
+    nav a {
+      margin-left: 1em;
+      text-decoration: none;
+      color: #0068b5;
+      font-weight: bold;
+    }
+    section {
+      max-width: 960px;
+      margin: auto;
+      padding: 2em;
+    }
+    .cards {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      padding: 1em;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 200px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .cta-box {
+      background: #e8f4ff;
+      border-left: 5px solid #0068b5;
+      padding: 1.5em;
+      text-align: center;
+      margin-bottom: 2em;
+      font-size: 1.2em;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 0.7em;
+      margin-top: 0.4em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    button {
+      background: #0068b5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    .resultado {
+      font-weight: bold;
+      margin-top: 1em;
+      color: green;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5em;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 30px;
+      text-align: center;
+      color: #fff;
+      line-height: 60px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <img src=\"assets/endesa-logo-novo.jpg\" alt="Endesa">
+    <img src="endesa-logo-novo.jpg" alt="Endesa" />
     <nav>
       <a href="#planos">Planos</a>
       <a href="#simulador">Simulador</a>
       <a href="#contacto">Contacto</a>
     </nav>
-  </header>  <section class="cta-box">
-    <p>⚡ <strong>Estás farto de pagar tanto de luz e não sabes porquê?</strong> Nós ajudamos-te.</p>
-    <p>📞 <strong>Liga-me grátis</strong> para começares já a poupar e garantir os teus <strong>70€</strong>!</p>
-  </section>  <section id="planos">
+  </header>
+
+  <section class="cta-box">
+    ⚡ <strong>Estás farto de pagar tanto de luz e não sabes porquê?</strong><br />
+    📞 <strong>Liga-me grátis</strong> para começares já a poupar e garantir os teus <strong>70€</strong>!
+  </section>
+
+  <section id="planos">
     <h2>Planos de Luz & Gás</h2>
     <div class="cards">
       <div class="card">
@@ -147,7 +128,7 @@ footer {
       </div>
       <div class="card">
         <h3>Quero+</h3>
-        <p>Até 27% desconto + bónus 70 €</p>
+        <p>Até 27% desconto + bónus 70€</p>
       </div>
       <div class="card">
         <h3>Aniversário</h3>
@@ -158,38 +139,48 @@ footer {
         <p>1 dia grátis ou 50% 2 dias/sem + 14% gás</p>
       </div>
     </div>
-  </section>  <section id="simulador">
+  </section>
+
+  <section id="simulador">
     <h2>Simulador de Poupança</h2>
     <div class="simulador">
-      <label>Insira o valor da sua fatura atual (€):</label>
-      <input type="number" id="valor" placeholder="Ex: 100">
+      <label for="valor">Quanto pagas atualmente na tua fatura (€)?</label>
+      <input type="number" id="valor" placeholder="Ex: 100" />
       <button onclick="simular()">Calcular Poupança 30%</button>
-      <p id="resultado" class="resultado"></p>
+      <p class="resultado" id="resultado"></p>
     </div>
-  </section>  <section id="contacto">
+  </section>
+
+  <section id="contacto">
     <h2>Contacto</h2>
-    <div class="contacto">
-      <form onsubmit="enviarEmail(); return false;">
-        <label>📩 Nome:</label>
-        <input id="nome" required>
-        <label>📧 Email:</label>
-        <input type="email" id="email" required>
-        <label>💬 Mensagem:</label>
-        <textarea id="mensagem"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>  <footer>
-    <p>© 2025 ...energia – Parceiro Endesa • Poupança garantida 30%</p>
-  </footer><a class="whatsapp-button" href="https://wa.me/351968677320?text=Olá%20Miguel,%20quero%20saber%20mais%20sobre%20a%20oferta%20com%2030%%20de%20desconto" target="_blank" title="WhatsApp">💬</a>
+    <form onsubmit="enviarEmail(); return false;">
+      <label for="nome">📩 Nome:</label>
+      <input id="nome" required />
+      <label for="email">📧 Email:</label>
+      <input type="email" id="email" required />
+      <label for="mensagem">💬 Mensagem:</label>
+      <textarea id="mensagem" rows="4"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 ...energia – Parceiro Endesa • Poupança garantida 30%
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/351968677320?text=Olá%20Miguel,%20quero%20saber%20mais%20sobre%20a%20oferta%20com%2030%%20de%20desconto" target="_blank">💬</a>
 
   <script>
     function simular() {
-      const v = parseFloat(document.getElementById('valor').value);
-      const res = document.getElementById('resultado');
-      if (!v || v<=0) return res.textContent = 'Insira um valor válido.';
-      const d = v*0.3, n = v-d;
-      res.textContent = `Poupa cerca de ${d.toFixed(2)} € → nova fatura: ${n.toFixed(2)} €.`;
+      const valor = parseFloat(document.getElementById('valor').value);
+      const resultado = document.getElementById('resultado');
+      if (!valor || valor <= 0) {
+        resultado.textContent = "Insere um valor válido.";
+        return;
+      }
+      const desconto = valor * 0.3;
+      const novoValor = valor - desconto;
+      resultado.textContent = `Poupas cerca de €${desconto.toFixed(2)} – Nova fatura: €${novoValor.toFixed(2)}`;
     }
 
     function enviarEmail() {
@@ -200,5 +191,7 @@ footer {
       const corpo = `Nome: ${nome}%0AEmail: ${email}%0AMensagem: ${mensagem}`;
       window.open(`mailto:miguelferreira@presentiluminado.pt?subject=Contacto via site&body=${corpo}`);
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
